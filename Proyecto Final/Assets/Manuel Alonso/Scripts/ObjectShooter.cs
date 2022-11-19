@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectShooter : MonoBehaviour
 {
@@ -11,11 +13,23 @@ public class ObjectShooter : MonoBehaviour
     [Header("Input")]
     public KeyCode fireButton = KeyCode.Space;
 
+    [Header("UI")]
+    public Image CannonCharge;
+
     private float timeToShoot;
 
     private void Update()
     {
         PrepareShooting();
+        CannonChargeBar();
+    }
+
+    private void CannonChargeBar()
+    {
+        if (CannonCharge == null)
+            return;
+
+        CannonCharge.fillAmount = 1 / (shootRate / timeToShoot);
     }
 
     private void PrepareShooting()
