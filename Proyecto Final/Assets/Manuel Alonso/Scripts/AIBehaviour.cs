@@ -2,33 +2,47 @@ using UnityEngine;
 
 public class AIBehaviour : MonoBehaviour
 {
-    [SerializeField] private ComportamientoEnemigo comportamientoEnemigo;
+    // Public variables
+    public BehaviourState comportamientoEnemigo;
 
     public Transform _target;
+
     public float chaseSpeed;
     public float lookAtSpeed;
     public float chaseMinDistance;
 
-    public enum ComportamientoEnemigo
+    // Protected variables
+    protected Rigidbody rb;
+
+    protected bool targetOnRange = false;
+
+    public enum BehaviourState
     {
+        None = 0,
         LookAtTarget,
         ChaseTarget
     }
 
+    protected void Start()
+    {
+		rb = GetComponent<Rigidbody>();
+    }
 
     void Update()
     {
-        switch (comportamientoEnemigo)
+        if (targetOnRange == true)
         {
-            case ComportamientoEnemigo.LookAtTarget:
-                LookAtTarget();
-                break;
-            case ComportamientoEnemigo.ChaseTarget:
-                ChaseTarget();
-                break;
-            default:
-                Debug.LogWarning($"Falta definir comportamiento");
-                break;
+            switch (comportamientoEnemigo)
+            {
+                case BehaviourState.LookAtTarget:
+                    LookAtTarget();
+                    break;
+                case BehaviourState.ChaseTarget:
+                    ChaseTarget();
+                    break;
+                default:                
+                    break;
+            }
         }
     }
 
@@ -36,7 +50,9 @@ public class AIBehaviour : MonoBehaviour
     {
         Vector3 relativePos = _target.position - transform.position;
         Quaternion newRotation = Quaternion.LookRotation(relativePos);
-        transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, lookAtSpeed * Time.deltaTime);
+        //transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, lookAtSpeed * Time.deltaTime);
+        Quaternion lerpRotation = Quaternion.Lerp(transform.rotation, newRotation, lookAtSpeed * Time.deltaTime);
+        rb.MoveRotation(lerpRotation);
     }
 
     private void ChaseTarget()
@@ -52,6 +68,8 @@ public class AIBehaviour : MonoBehaviour
     private void PositionMoveTowards()
     {
         Vector3 direction = (_target.position - transform.position).normalized;
-        transform.position = transform.position + direction * chaseSpeed * Time.deltaTime;
+        //transform.position = transform.position + direction * chaseSpeed * Time.deltaTime;
+        Vector3 newPosition = transform.position + chaseSpeed * Time.deltaTime * direction;
+        rb.MovePosition(newPosition);
     }
 }
