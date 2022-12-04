@@ -361,6 +361,7 @@ MonoBehaviour:
   isAutomatic: 0
   fireButton: 32
   CannonCharge: {fileID: 0}
+  _shootClip: {fileID: 8300000, guid: 2a921313c927f45238a0b8baabe3ab12, type: 3}
 --- !u!114 &8708849981834704550
 MonoBehaviour:
   m_ObjectHideFlags: 0

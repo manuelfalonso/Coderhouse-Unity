@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Manuel Alonso/Scenes/Menu.unity
     guid: 42537feb8ca3ebf43ab580c7035b21cd
   - enabled: 1
-    path: Assets/Manuel Alonso/Scenes/Main.unity
+    path: Assets/Manuel Alonso/Scenes/Level1.unity
     guid: fb5ad824ee16b9a42ab9117ee36a844a
   m_configObjects: {}
