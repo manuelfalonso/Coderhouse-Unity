@@ -23,7 +23,7 @@ public class AIBehaviour : MonoBehaviour
         ChaseTarget
     }
 
-    protected void Start()
+    virtual protected void Start()
     {
 		rb = GetComponent<Rigidbody>();
     }
