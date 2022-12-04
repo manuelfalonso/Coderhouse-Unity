@@ -8,7 +8,7 @@ public class PatrolAIBehaviour : AIBehaviour
 	private Vector3[] newWaypoints;
     private int currentTargetIndex;
 
-    protected void Start()
+    override protected void Start()
     {
         base.Start();
 
