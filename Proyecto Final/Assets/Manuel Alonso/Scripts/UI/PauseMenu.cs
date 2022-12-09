@@ -7,6 +7,12 @@ public class PauseMenu : MonoBehaviour
 
     private bool _gamePaused = false;
 
+    private void Start()
+    {
+        // On load level
+        Cursor.visible = false;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(PauseKey))
@@ -27,11 +33,13 @@ public class PauseMenu : MonoBehaviour
         {
             Time.timeScale = 1.0f;
             _gamePaused = false;
+            Cursor.visible = false;
         }
         else
         {
             Time.timeScale = 0f;
             _gamePaused = true;
+            Cursor.visible = true;
         }
     }
 }

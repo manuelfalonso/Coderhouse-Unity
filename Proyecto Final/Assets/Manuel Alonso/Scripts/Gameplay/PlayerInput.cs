@@ -18,10 +18,10 @@ public class PlayerInput : MonoBehaviour
 
     private void Move()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
+        //float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        Vector3 translation = new Vector3(moveHorizontal, 0f, moveVertical) * velocidad * Time.deltaTime;
+        Vector3 translation = new Vector3(0f, 0f, moveVertical) * velocidad * Time.deltaTime;
 
         transform.Translate(translation, Space.Self);
     }
