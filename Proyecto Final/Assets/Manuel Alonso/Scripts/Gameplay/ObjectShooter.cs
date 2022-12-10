@@ -4,6 +4,13 @@ using UnityEngine.UI;
 
 public class ObjectShooter : MonoBehaviour
 {
+    public enum MouseButton
+    {
+        Left = 0,
+        Right = 1,
+        Middle = 2,
+    }
+
     [Header("Data")]
     public GameObject bulletPrefab;
     public Transform spawnPoint;
@@ -11,6 +18,8 @@ public class ObjectShooter : MonoBehaviour
     public bool isAutomatic = false;
 
     [Header("Input")]
+    [SerializeField] private bool _useMouseInput = true;
+    [SerializeField] private MouseButton _fireMouseButton = MouseButton.Left;
     public KeyCode fireButton = KeyCode.Space;
 
     [Header("UI")]
@@ -49,6 +58,14 @@ public class ObjectShooter : MonoBehaviour
         {
             Shoot();
             timeToShoot = 0f;
+        }
+        else if (_useMouseInput)
+        {
+            if (Input.GetMouseButtonDown((int)_fireMouseButton))
+            {
+                Shoot();
+                timeToShoot = 0f;
+            }
         }
         else if (Input.GetKeyDown(fireButton))
         {

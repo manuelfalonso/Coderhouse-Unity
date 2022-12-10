@@ -1,8 +1,13 @@
 using UnityEngine;
+using Cinemachine;
 
 public class Respawn : MonoBehaviour
 {
     public float timeToRespawn = 3f;
+
+    [Header("Cameras")]
+    [SerializeField] private CinemachineVirtualCamera _spawnCamera = default;
+    [SerializeField] private CinemachineVirtualCamera _playerCamera = default;
 
     private Vector3 startPosition;
     private Quaternion startRotation;
@@ -13,6 +18,8 @@ public class Respawn : MonoBehaviour
     {
         startPosition = transform.position;
         startRotation = transform.rotation;
+
+        ToggleCamera();
     }
 
     void Update()
@@ -41,11 +48,22 @@ public class Respawn : MonoBehaviour
         Debug.Log($"Respawned");
         transform.position = startPosition;
         transform.rotation = startRotation;
+        ToggleCamera();
     }
 
     public void StartCountdown()
     {
         isCounterActive = true;
+        ToggleCamera();
         Debug.Log($"Respawning in {timeToRespawn} seconds");
+    }
+
+    private void ToggleCamera()
+    {
+        if (_spawnCamera != null)
+            _spawnCamera.gameObject.SetActive(!_spawnCamera.gameObject.activeSelf);
+
+        if (_playerCamera != null)
+            _playerCamera.gameObject.SetActive(!_playerCamera.gameObject.activeSelf);
     }
 }

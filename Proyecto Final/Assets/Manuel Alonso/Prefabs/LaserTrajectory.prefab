@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 948317924853981353}
   - component: {fileID: 7965171608310455868}
   m_Layer: 0
-  m_Name: Trajectory
+  m_Name: LaserTrajectory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
