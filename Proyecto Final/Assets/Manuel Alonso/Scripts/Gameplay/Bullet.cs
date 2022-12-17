@@ -16,6 +16,8 @@ public class Bullet : MonoBehaviour
 
     private Rigidbody rb;
 
+    private float _baseExplosionForce = 1f;
+
     private void Start()
     {
         Destroy(gameObject, timeToDestroy);
@@ -27,12 +29,18 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.layer == entitiesLayer)
         {
-            // Create explosion
-            collision.gameObject.GetComponent<Rigidbody>().
-                AddExplosionForce(explosionForce, collision.contacts[0].point, explosionRadius, 0f, ForceMode.Impulse);
-            // Play sound
-            AudioManager.Instance.PlaySound(_clip);
-            Destroy(gameObject);
+            if (collision.gameObject.TryGetComponent(out TotalDamage component))
+            {
+                float totalDamage = component.GetHit();
+
+                // Create explosion
+                collision.gameObject.GetComponent<Rigidbody>().
+                    AddExplosionForce(_baseExplosionForce + explosionForce * totalDamage, collision.contacts[0].point, explosionRadius, 10f, ForceMode.Impulse);
+            }
         }
+
+        // Play sound
+        AudioManager.Instance.PlaySound(_clip);
+        Destroy(gameObject);
     }
 }

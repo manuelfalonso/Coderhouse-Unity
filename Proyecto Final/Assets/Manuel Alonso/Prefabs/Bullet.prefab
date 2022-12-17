@@ -77,10 +77,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 1}
-  speed: 70
+  speed: 100
   damage: 20
   timeToDestroy: 3
-  explosionForce: 10
+  explosionForce: 1
   explosionRadius: 1
   entitiesLayer: 6
   _clip: {fileID: 8300000, guid: 7c2de8e149d8346748fb31ed14cc7986, type: 3}
