@@ -365,9 +365,11 @@ GameObject:
   - component: {fileID: 2023049387730581083}
   - component: {fileID: 5811647832372534821}
   - component: {fileID: 9085658793912476890}
+  - component: {fileID: 4774088823521976825}
   - component: {fileID: 6514025439346953342}
   - component: {fileID: 8959085190232557429}
   - component: {fileID: 8708849981834704550}
+  - component: {fileID: 9120691709860947327}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -421,6 +423,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 3, z: 6}
   m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!65 &4774088823521976825
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5132394185400640239}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1, z: 2}
+  m_Center: {x: 0, y: 3.5, z: 0.36}
 --- !u!114 &6514025439346953342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,6 +488,19 @@ MonoBehaviour:
   timeToRespawn: 3
   _spawnCamera: {fileID: 7448215233168117020}
   _playerCamera: {fileID: 3201406876349032152}
+--- !u!114 &9120691709860947327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5132394185400640239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ed7df918b159a47816c9293a6c8f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageHitAdittion: 10
 --- !u!1 &5687709127070251456
 GameObject:
   m_ObjectHideFlags: 0

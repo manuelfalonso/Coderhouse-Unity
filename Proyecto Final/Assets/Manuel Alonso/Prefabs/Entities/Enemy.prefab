@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 7694500675922250439}
   - component: {fileID: 8599265253972402940}
   - component: {fileID: 8959085190232557429}
-  - component: {fileID: 3793779216878144090}
+  - component: {fileID: 8405507539011159121}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -381,10 +381,12 @@ MonoBehaviour:
   spawnPoint: {fileID: 8857084350096090423}
   shootRate: 4
   isAutomatic: 1
+  _useMouseInput: 1
+  _fireMouseButton: 0
   fireButton: 32
   CannonCharge: {fileID: 0}
   _shootClip: {fileID: 8300000, guid: 2a921313c927f45238a0b8baabe3ab12, type: 3}
---- !u!114 &3793779216878144090
+--- !u!114 &8405507539011159121
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -393,10 +395,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5132394185400640239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3af6ad0a838b254f905362ebb3fa007, type: 3}
+  m_Script: {fileID: 11500000, guid: 02ed7df918b159a47816c9293a6c8f02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToRespawn: 3
+  _damageHitAdittion: 10
+  _damageTotal: 0
 --- !u!1 &5139717587199261310
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,13 +1,20 @@
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.Events;
 
 public class Respawn : MonoBehaviour
 {
+    [Header("Data")]
     public float timeToRespawn = 3f;
+    [SerializeField] private int _lifes = 3;
 
     [Header("Cameras")]
     [SerializeField] private CinemachineVirtualCamera _spawnCamera = default;
     [SerializeField] private CinemachineVirtualCamera _playerCamera = default;
+
+    [Space]
+
+    public UnityEvent LifeLost = new UnityEvent();
 
     private Vector3 startPosition;
     private Quaternion startRotation;
@@ -53,9 +60,14 @@ public class Respawn : MonoBehaviour
 
     public void StartCountdown()
     {
-        isCounterActive = true;
-        ToggleCamera();
-        Debug.Log($"Respawning in {timeToRespawn} seconds");
+        if (_lifes > 0)
+        {
+            _lifes--;
+            LifeLost?.Invoke();
+            isCounterActive = true;
+            ToggleCamera();
+            Debug.Log($"Respawning in {timeToRespawn} seconds. {_lifes} remaining");
+        }
     }
 
     private void ToggleCamera()
