@@ -354,6 +354,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772b0064d75af50438de335e291b4424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &61178702 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3737444005991757162, guid: f88d8234566050e49878a251eb30b127, type: 3}
+  m_PrefabInstance: {fileID: 1551980684}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5be3dc9c4fc4a54cb9a3eb1f51c70fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &133757888 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1864344025288031520, guid: dd298cf7da5b0a54e93552b38a026307, type: 3}
@@ -363,6 +374,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &174857099 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1447051529221671555, guid: f88d8234566050e49878a251eb30b127, type: 3}
+  m_PrefabInstance: {fileID: 1551980684}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5be3dc9c4fc4a54cb9a3eb1f51c70fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &270661837
@@ -631,6 +653,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7f2f3edd8a2129449c5aabdff94e151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &518898342 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1447051529221671555, guid: f88d8234566050e49878a251eb30b127, type: 3}
+  m_PrefabInstance: {fileID: 51611032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5be3dc9c4fc4a54cb9a3eb1f51c70fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &589847975
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +865,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 548db5c38cb3fc940bd7c80c2528b072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &742917502 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3594153296088410706, guid: f88d8234566050e49878a251eb30b127, type: 3}
+  m_PrefabInstance: {fileID: 51611032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5be3dc9c4fc4a54cb9a3eb1f51c70fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &795999133
@@ -1156,6 +1200,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1033721254 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3594153296088410706, guid: f88d8234566050e49878a251eb30b127, type: 3}
+  m_PrefabInstance: {fileID: 1551980684}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5be3dc9c4fc4a54cb9a3eb1f51c70fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1163935062 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7919312183453284749, guid: 798f275fded08b944be834cb027f5eb6, type: 3}
@@ -1335,6 +1390,57 @@ MonoBehaviour:
   chaseSpeed: 4
   lookAtSpeed: 10
   chaseMinDistance: 10
+  OnIsMovingChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 61178702}
+        m_TargetAssemblyTypeName: SetAnimationParameter, Assembly-CSharp
+        m_MethodName: SetBoolParameter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 174857099}
+        m_TargetAssemblyTypeName: SetAnimationParameter, Assembly-CSharp
+        m_MethodName: SetBoolParameter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1033721254}
+        m_TargetAssemblyTypeName: SetAnimationParameter, Assembly-CSharp
+        m_MethodName: SetBoolParameter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2034748903}
+        m_TargetAssemblyTypeName: SetAnimationParameter, Assembly-CSharp
+        m_MethodName: SetBoolParameter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1551980688 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8405507539011159121, guid: f88d8234566050e49878a251eb30b127, type: 3}
@@ -1446,6 +1552,57 @@ MonoBehaviour:
   chaseSpeed: 4
   lookAtSpeed: 10
   chaseMinDistance: 10
+  OnIsMovingChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2015099220}
+        m_TargetAssemblyTypeName: SetAnimationParameter, Assembly-CSharp
+        m_MethodName: SetBoolParameter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 518898342}
+        m_TargetAssemblyTypeName: SetAnimationParameter, Assembly-CSharp
+        m_MethodName: SetBoolParameter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 742917502}
+        m_TargetAssemblyTypeName: SetAnimationParameter, Assembly-CSharp
+        m_MethodName: SetBoolParameter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1960697523}
+        m_TargetAssemblyTypeName: SetAnimationParameter, Assembly-CSharp
+        m_MethodName: SetBoolParameter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   waypoints:
   - {x: 7, y: 0, z: 20}
   - {x: 10, y: 0, z: 36}
@@ -1506,7 +1663,7 @@ GameObject:
   - component: {fileID: 1715853942}
   - component: {fileID: 1715853941}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1790,6 +1947,17 @@ MonoBehaviour:
   blendDistance: 5
   weight: 1
   priority: 0
+--- !u!114 &1960697523 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7074306952317618149, guid: f88d8234566050e49878a251eb30b127, type: 3}
+  m_PrefabInstance: {fileID: 51611032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5be3dc9c4fc4a54cb9a3eb1f51c70fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1970625731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,6 +1990,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2015099220 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3737444005991757162, guid: f88d8234566050e49878a251eb30b127, type: 3}
+  m_PrefabInstance: {fileID: 51611032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5be3dc9c4fc4a54cb9a3eb1f51c70fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2034748903 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7074306952317618149, guid: f88d8234566050e49878a251eb30b127, type: 3}
+  m_PrefabInstance: {fileID: 1551980684}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5be3dc9c4fc4a54cb9a3eb1f51c70fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2054563287
 GameObject:
   m_ObjectHideFlags: 0

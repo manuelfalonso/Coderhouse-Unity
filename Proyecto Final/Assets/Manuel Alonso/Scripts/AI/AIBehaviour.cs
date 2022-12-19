@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AIBehaviour : MonoBehaviour
 {
@@ -11,10 +13,27 @@ public class AIBehaviour : MonoBehaviour
     public float lookAtSpeed;
     public float chaseMinDistance;
 
+    public UnityEvent<bool> OnIsMovingChanged = new UnityEvent<bool>();
+
     // Protected variables
     protected Rigidbody rb;
 
     protected bool targetOnRange = false;
+    protected Vector3 _lastPosition = new Vector3();
+
+    protected bool _isMoving = false;
+    public bool IsMoving
+    {
+        get { return _isMoving; }
+        set
+        {
+            if (_isMoving != value)
+            {
+                _isMoving = value;
+                OnIsMovingChanged?.Invoke(value);
+            }
+        }
+    }
 
     public enum BehaviourState
     {
@@ -25,7 +44,8 @@ public class AIBehaviour : MonoBehaviour
 
     virtual protected void Start()
     {
-		rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
+        _lastPosition = transform.position;
     }
 
     void Update()
@@ -40,10 +60,26 @@ public class AIBehaviour : MonoBehaviour
                 case BehaviourState.ChaseTarget:
                     ChaseTarget();
                     break;
-                default:                
+                default:
                     break;
             }
         }
+
+        CheckIsMoving();
+    }
+
+    private void CheckIsMoving()
+    {
+        if (_lastPosition == transform.position)
+        {
+            IsMoving = false;
+        }
+        else
+        {
+            IsMoving = true;
+        }
+
+        _lastPosition = transform.position;
     }
 
     private void LookAtTarget()
