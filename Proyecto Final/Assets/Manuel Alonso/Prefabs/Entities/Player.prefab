@@ -486,8 +486,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToRespawn: 3
+  _lifes: 3
   _spawnCamera: {fileID: 7448215233168117020}
   _playerCamera: {fileID: 3201406876349032152}
+  LifeLost:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &9120691709860947327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,6 +505,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageHitAdittion: 10
+  _damageTotal: 0
+  OnDamageChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5687709127070251456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,6 +1171,8 @@ MonoBehaviour:
   _verticalSpeed: 1
   _horizontalRotate: 1
   _verticallRotate: 0
+  _verticalFromAngle: -10
+  _verticalToAngle: 10
 --- !u!1 &8356545449967647314 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 128516, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
@@ -1184,6 +1194,8 @@ MonoBehaviour:
   _verticalSpeed: 50
   _horizontalRotate: 0
   _verticallRotate: 1
+  _verticalFromAngle: -9
+  _verticalToAngle: 9
 --- !u!4 &8356545449967753320 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 496702, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
