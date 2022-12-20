@@ -40,7 +40,7 @@ public class TotalDamage : MonoBehaviour
         _respawn = GetComponent<Respawn>();
         if (_respawn != null)
         {
-            _respawn.LifeLost.AddListener(OnLifeLost);
+            _respawn.OnLifeLost.AddListener(OnLifeLost);
         }
         DamageTotal = 0;
     }
@@ -48,6 +48,11 @@ public class TotalDamage : MonoBehaviour
     private void OnLifeLost()
     {
         _damageTotal = 0;
+    }
+
+    public void OnDeath()
+    {
+        _damageTotal = MaxDamage;
     }
 
     public int GetHit()

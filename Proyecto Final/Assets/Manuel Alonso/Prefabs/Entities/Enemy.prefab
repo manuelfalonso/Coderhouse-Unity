@@ -296,6 +296,7 @@ GameObject:
   - component: {fileID: 8599265253972402940}
   - component: {fileID: 8959085190232557429}
   - component: {fileID: 8405507539011159121}
+  - component: {fileID: 389223640364423143}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -363,11 +364,60 @@ MonoBehaviour:
   comportamientoEnemigo: 0
   _target: {fileID: 0}
   chaseSpeed: 4
-  lookAtSpeed: 1
+  lookAtSpeed: 10
   chaseMinDistance: 10
   OnIsMovingChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3737444005991757162}
+        m_TargetAssemblyTypeName: SetAnimationParameter, Assembly-CSharp
+        m_MethodName: SetBoolParameter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1447051529221671555}
+        m_TargetAssemblyTypeName: SetAnimationParameter, Assembly-CSharp
+        m_MethodName: SetBoolParameter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3594153296088410706}
+        m_TargetAssemblyTypeName: SetAnimationParameter, Assembly-CSharp
+        m_MethodName: SetBoolParameter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7074306952317618149}
+        m_TargetAssemblyTypeName: SetAnimationParameter, Assembly-CSharp
+        m_MethodName: SetBoolParameter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  targetOnRange: 1
 --- !u!114 &8959085190232557429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,6 +456,40 @@ MonoBehaviour:
   OnDamageChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &389223640364423143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5132394185400640239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3af6ad0a838b254f905362ebb3fa007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToRespawn: 3
+  _lifes: 0
+  _spawnCamera: {fileID: 0}
+  _playerCamera: {fileID: 0}
+  OnLifeLost:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8405507539011159121}
+        m_TargetAssemblyTypeName: TotalDamage, Assembly-CSharp
+        m_MethodName: OnDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5139717587199261310
 GameObject:
   m_ObjectHideFlags: 0
