@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,6 +12,7 @@ public class AIBehaviour : MonoBehaviour
     public float lookAtSpeed;
     public float chaseMinDistance;
 
+    [Header("Events")]
     public UnityEvent<bool> OnIsMovingChanged = new UnityEvent<bool>();
 
     // Protected variables
@@ -86,7 +86,6 @@ public class AIBehaviour : MonoBehaviour
     {
         Vector3 relativePos = _target.position - transform.position;
         Quaternion newRotation = Quaternion.LookRotation(relativePos);
-        //transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, lookAtSpeed * Time.deltaTime);
         Quaternion lerpRotation = Quaternion.Lerp(transform.rotation, newRotation, lookAtSpeed * Time.deltaTime);
         rb.MoveRotation(lerpRotation);
     }
@@ -104,7 +103,6 @@ public class AIBehaviour : MonoBehaviour
     private void PositionMoveTowards()
     {
         Vector3 direction = (_target.position - transform.position).normalized;
-        //transform.position = transform.position + direction * chaseSpeed * Time.deltaTime;
         Vector3 newPosition = transform.position + chaseSpeed * Time.deltaTime * direction;
         rb.MovePosition(newPosition);
     }
