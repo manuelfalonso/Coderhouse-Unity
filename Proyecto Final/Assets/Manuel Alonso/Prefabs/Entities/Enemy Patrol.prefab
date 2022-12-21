@@ -1,0 +1,178 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2526939568522002
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2023049387730581083, guid: f88d8234566050e49878a251eb30b127, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2023049387730581083, guid: f88d8234566050e49878a251eb30b127, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2023049387730581083, guid: f88d8234566050e49878a251eb30b127, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2023049387730581083, guid: f88d8234566050e49878a251eb30b127, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2023049387730581083, guid: f88d8234566050e49878a251eb30b127, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2023049387730581083, guid: f88d8234566050e49878a251eb30b127, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2023049387730581083, guid: f88d8234566050e49878a251eb30b127, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2023049387730581083, guid: f88d8234566050e49878a251eb30b127, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2023049387730581083, guid: f88d8234566050e49878a251eb30b127, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2023049387730581083, guid: f88d8234566050e49878a251eb30b127, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2023049387730581083, guid: f88d8234566050e49878a251eb30b127, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132394185400640239, guid: f88d8234566050e49878a251eb30b127, type: 3}
+      propertyPath: m_Name
+      value: Enemy Patrol
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8599265253972402940, guid: f88d8234566050e49878a251eb30b127, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: f88d8234566050e49878a251eb30b127, type: 3}
+--- !u!114 &1449050282761144721 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1447051529221671555, guid: f88d8234566050e49878a251eb30b127, type: 3}
+  m_PrefabInstance: {fileID: 2526939568522002}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5be3dc9c4fc4a54cb9a3eb1f51c70fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3596130202247227712 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3594153296088410706, guid: f88d8234566050e49878a251eb30b127, type: 3}
+  m_PrefabInstance: {fileID: 2526939568522002}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5be3dc9c4fc4a54cb9a3eb1f51c70fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3735432122871379576 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3737444005991757162, guid: f88d8234566050e49878a251eb30b127, type: 3}
+  m_PrefabInstance: {fileID: 2526939568522002}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5be3dc9c4fc4a54cb9a3eb1f51c70fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5129907209002295805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5132394185400640239, guid: f88d8234566050e49878a251eb30b127, type: 3}
+  m_PrefabInstance: {fileID: 2526939568522002}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-2005071630235685657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5129907209002295805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238a227d3c2650e4387b431d7a4f9639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comportamientoEnemigo: 0
+  _target: {fileID: 0}
+  chaseSpeed: 4
+  lookAtSpeed: 10
+  chaseMinDistance: 10
+  OnIsMovingChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3735432122871379576}
+        m_TargetAssemblyTypeName: SetAnimationParameter, Assembly-CSharp
+        m_MethodName: SetBoolParameter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1449050282761144721}
+        m_TargetAssemblyTypeName: SetAnimationParameter, Assembly-CSharp
+        m_MethodName: SetBoolParameter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3596130202247227712}
+        m_TargetAssemblyTypeName: SetAnimationParameter, Assembly-CSharp
+        m_MethodName: SetBoolParameter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7071784521492727031}
+        m_TargetAssemblyTypeName: SetAnimationParameter, Assembly-CSharp
+        m_MethodName: SetBoolParameter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  waypoints: []
+--- !u!114 &7071784521492727031 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7074306952317618149, guid: f88d8234566050e49878a251eb30b127, type: 3}
+  m_PrefabInstance: {fileID: 2526939568522002}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5be3dc9c4fc4a54cb9a3eb1f51c70fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -18,6 +18,7 @@ public class AIBehaviour : MonoBehaviour
     // Protected variables
     protected Rigidbody rb;
 
+    [SerializeField]
     protected bool targetOnRange = false;
     protected Vector3 _lastPosition = new Vector3();
 
@@ -46,6 +47,7 @@ public class AIBehaviour : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         _lastPosition = transform.position;
+        _target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update()

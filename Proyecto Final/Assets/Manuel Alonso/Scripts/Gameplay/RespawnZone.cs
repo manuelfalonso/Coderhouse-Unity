@@ -14,6 +14,9 @@ public class RespawnZone : MonoBehaviour
         if (!other.CompareTag(playerTag) && !other.CompareTag(enemyTag))
             return;
 
-        other.GetComponent<Respawn>().StartCountdown();
+        if (other.TryGetComponent<Respawn>(out Respawn component))
+        {
+            component.StartCountdown();
+        }
     }
 }

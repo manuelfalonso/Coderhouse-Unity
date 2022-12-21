@@ -3,7 +3,7 @@ using UnityEngine;
 public class PatrolAIBehaviour : AIBehaviour
 {
     [Header("Waypoints")]
-    public Vector3[] waypoints;
+    public Transform[] waypoints;
 
 	private Vector3[] newWaypoints;
     private int currentTargetIndex;
@@ -22,7 +22,7 @@ public class PatrolAIBehaviour : AIBehaviour
         newWaypoints = new Vector3[waypoints.Length + 1];
         for (int i = 0; i < waypoints.Length; i++)
         {
-            newWaypoints[i] = waypoints[i];
+            newWaypoints[i] = waypoints[i].position;
         }
 
         newWaypoints[waypoints.Length] = transform.position;

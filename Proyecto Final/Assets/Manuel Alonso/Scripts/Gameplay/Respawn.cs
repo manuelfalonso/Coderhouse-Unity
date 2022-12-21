@@ -14,7 +14,8 @@ public class Respawn : MonoBehaviour
 
     [Space]
 
-    public UnityEvent LifeLost = new UnityEvent();
+    public UnityEvent OnLifeLost = new UnityEvent();
+    public UnityEvent OnDeath = new UnityEvent();
 
     private Vector3 startPosition;
     private Quaternion startRotation;
@@ -60,13 +61,21 @@ public class Respawn : MonoBehaviour
 
     public void StartCountdown()
     {
+        ToggleCamera();
+
         if (_lifes > 0)
         {
             _lifes--;
-            LifeLost?.Invoke();
+            OnLifeLost?.Invoke();
             isCounterActive = true;
-            ToggleCamera();
             Debug.Log($"Respawning in {timeToRespawn} seconds. {_lifes} remaining");
+        }
+        else
+        {
+            // Death
+            OnDeath?.Invoke();
+            Destroy(gameObject, 2f);
+            //gameObject.SetActive(false);
         }
     }
 
