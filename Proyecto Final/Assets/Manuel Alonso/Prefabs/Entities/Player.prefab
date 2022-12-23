@@ -471,8 +471,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3af6ad0a838b254f905362ebb3fa007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPlayer: 1
   timeToRespawn: 3
-  _lifes: 3
+  _lifes: 2
   _spawnCamera: {fileID: 7448215233168117020}
   _playerCamera: {fileID: 3201406876349032152}
   OnLifeLost:

@@ -1,21 +1,23 @@
 using UnityEngine;
 using Cinemachine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Respawn : MonoBehaviour
 {
     [Header("Data")]
+    [SerializeField] private bool _isPlayer = false;
     public float timeToRespawn = 3f;
     [SerializeField] private int _lifes = 3;
+    public int Lifes { get { return _lifes; } set { _lifes = value; } }
 
     [Header("Cameras")]
     [SerializeField] private CinemachineVirtualCamera _spawnCamera = default;
     [SerializeField] private CinemachineVirtualCamera _playerCamera = default;
 
     [Space]
-
     public UnityEvent OnLifeLost = new UnityEvent();
-    public UnityEvent OnDeath = new UnityEvent();
+    public UnityEvent<bool> OnDeath = new UnityEvent<bool>();
 
     private Vector3 startPosition;
     private Quaternion startRotation;
@@ -28,6 +30,11 @@ public class Respawn : MonoBehaviour
         startRotation = transform.rotation;
 
         ToggleCamera();
+
+        if (!_isPlayer)
+        {
+            GameManager.Instance.SubscribeTank(this);
+        }
     }
 
     void Update()
@@ -73,9 +80,15 @@ public class Respawn : MonoBehaviour
         else
         {
             // Death
-            OnDeath?.Invoke();
-            Destroy(gameObject, 2f);
-            //gameObject.SetActive(false);
+            OnDeath?.Invoke(_isPlayer);
+            if (_isPlayer)
+            {
+                Invoke(nameof(RestartLevel), 5f);
+            }
+            else
+            {
+                Destroy(gameObject, 2f);
+            }
         }
     }
 
@@ -86,5 +99,11 @@ public class Respawn : MonoBehaviour
 
         if (_playerCamera != null)
             _playerCamera.gameObject.SetActive(!_playerCamera.gameObject.activeSelf);
+    }
+
+    private void RestartLevel()
+    {
+        // Restart same level
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
