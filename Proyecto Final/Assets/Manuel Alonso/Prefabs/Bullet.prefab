@@ -84,6 +84,7 @@ MonoBehaviour:
   explosionRadius: 1
   entitiesLayer: 6
   _clip: {fileID: 8300000, guid: 7c2de8e149d8346748fb31ed14cc7986, type: 3}
+  _particles: {fileID: 4746133843616728422, guid: 4e31fc4f2adf4f745a1c3dce349c3546, type: 3}
 --- !u!1001 &3749208054479580855
 PrefabInstance:
   m_ObjectHideFlags: 0

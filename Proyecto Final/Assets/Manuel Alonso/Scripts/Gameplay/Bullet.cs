@@ -13,6 +13,7 @@ public class Bullet : MonoBehaviour
     public float explosionRadius = 1f;
     public int entitiesLayer = 6;
     [SerializeField] private AudioClip _clip;
+    [SerializeField] private ParticleSystem _particles;
 
     private Rigidbody rb;
 
@@ -41,6 +42,7 @@ public class Bullet : MonoBehaviour
 
         // Play sound
         AudioManager.Instance.PlaySound(_clip);
+        Instantiate(_particles, collision.GetContact(0).point, collision.transform.rotation);
         Destroy(gameObject);
     }
 }
