@@ -1,1 +1,2 @@
-# Unity-Primera-Entrega
+# Coderhouse-Unity course
+Unity game development course at Coderhouse (2022).
